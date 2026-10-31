@@ -1,0 +1,156 @@
+:root {
+  --tinta: #05243e;
+  --papel: #24446d;
+  --amarillo: #ffcd2a;
+  --texto: #ffff;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.wrap {
+  width: min(100% - 2.5rem, 46rem);
+  margin-inline: auto;
+}
+
+/* Cabecera */
+.hero {
+  background: var(--tinta);
+  color: #fff;
+  padding-bottom: 2.5rem;
+}
+
+.tape {
+  height: 14px;
+  background: repeating-linear-gradient(-45deg, var(--amarillo) 0 14px, var(--tinta) 14px 28px);
+}
+
+.hero-texto {
+  padding-top: 2.25rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.1rem, 7vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.lead {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 1.15rem;
+  color: #fff5f5;
+}
+
+.lead strong { color: var(--amarillo); }
+
+/* Contenido */
+main { padding-block: 1rem 2rem; }
+
+section { padding-top: 2rem; }
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0 0 1rem; max-width: 40rem; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; max-width: 40rem; }
+
+li { margin-bottom: 0.75rem; }
+
+/* Listas con marca de color */
+.alerta li,
+.ok li {
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 5px solid var(--rojo);
+}
+
+.ok li { border-left-color: var(--verde); }
+
+/* Pasos (esta sí es una secuencia) */
+ol { counter-reset: paso; }
+
+ol li {
+  counter-increment: paso;
+  position: relative;
+  padding-left: 2.75rem;
+  min-height: 2rem;
+}
+
+ol li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--tinta);
+  color: #fff;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+/* Video */
+.video-box {
+  border: 4px solid var(--tinta);
+  border-radius: 6px;
+  background: #000;
+  overflow: hidden;
+}
+
+video {
+  display: block;
+  width: 50%;
+  height: 50%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+video:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 3px;
+}
+
+.video-educativo {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    color: #172554;
+  }
+
+  .contenedor-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .contenedor-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }

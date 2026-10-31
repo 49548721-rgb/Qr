@@ -1,0 +1,11 @@
+{
+  "name": "QR Seguro",
+  "short_name": "QR Seguro",
+  "description": "Cómo reconocer y evitar los códigos QR sospechosos.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0E1B2C",
+  "theme_color": "#0E1B2C"
+}
